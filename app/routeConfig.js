@@ -1,10 +1,8 @@
 import NotFound from '@containers/NotFoundPage/Loadable';
-import HomeContainer from '@containers/HomeContainer/Loadable';
-import routeConstants from '@utils/routeConstants';
+import LandingPage from '@containers/LandingPage/Loadable';
 export const routeConfig = {
   repos: {
-    component: HomeContainer,
-    ...routeConstants.repos
+    component: LandingPage
   },
   notFoundPage: {
     component: NotFound,
