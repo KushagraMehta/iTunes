@@ -5,7 +5,9 @@ import { landingPageType, landingPageActions } from './reducer';
 // worker Saga
 function* getApiData(action) {
   const data = yield call(ituneAPI.getSearchResult, action.searchQuery);
-  if (data) yield put(landingPageActions.storeSearchResults(data));
+  if (data) {
+    yield put(landingPageActions.storeSearchResults(data));
+  }
 }
 
 // Individual exports for testing

@@ -11,7 +11,9 @@ class ItuneAPI {
     this.api
       .get(`search?term=${term}`)
       .then(response => {
-        if (!response.ok) throw new Error(`${response.originalError} is occur, Please contact site admin.`);
+        if (!response.ok) {
+          throw new Error(`${response.originalError} is occur, Please contact site admin.`);
+        }
         return response.data;
       })
       .catch(error => alert(error));

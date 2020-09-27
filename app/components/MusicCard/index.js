@@ -14,8 +14,11 @@ function MusicCard({ artistName, img, releaseDate, previewUrl, collectionName })
   const [playAudio, setplayAudio] = useState(false);
   const audioElement = useRef(null);
   useEffect(() => {
-    if (playAudio) audioElement.current.play();
-    else audioElement.current.pause();
+    if (playAudio) {
+      audioElement.current.play();
+    } else {
+      audioElement.current.pause();
+    }
   }, [playAudio]);
   const switchAudio = () => setplayAudio(!playAudio);
   return (
